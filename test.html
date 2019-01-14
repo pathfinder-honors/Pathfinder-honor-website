@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD760EeONRvN-11kgSaqTDwx3blDlQKp1M",
+    authDomain: "community-christmas.firebaseapp.com",
+    databaseURL: "https://community-christmas.firebaseio.com",
+    projectId: "community-christmas",
+    storageBucket: "community-christmas.appspot.com",
+    messagingSenderId: "1079580350875"
+  };
+  firebase.initializeApp(config);
+</script>
+  <title>test</title>
+</head>
+<body>
+<input type = "text" id = "Text"></input>
+<input type = "text" id = "Text2"></input>
+<input type="button" id = "generate" name="Button" value = "submit" onclick="getdata(); writeUserData();"></input>
+<script>
+//get data from text box
+var clubName;
+var firstName;
+function getdata() {
+ clubName = (document.getElementById('Text').value);
+firstName = Math.floor((Math.random() * 1000) + 100);
+}
+//var clubName = 'Eau Claire Critters';
+//var name = 'Josh Simmons';
+function writeUserData() {
+    //console.log(clubName, firstName);
+  firebase.database().ref().child('user').push({
+    name : firstName,
+    clubName: clubName   
+  });
+}
+var id = Math.floor((Math.random() * 1000) + 100);
+console.log(id);
+</script>
+</body>
+</html>

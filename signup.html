@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD760EeONRvN-11kgSaqTDwx3blDlQKp1M",
+    authDomain: "community-christmas.firebaseapp.com",
+    databaseURL: "https://community-christmas.firebaseio.com",
+    projectId: "community-christmas",
+    storageBucket: "community-christmas.appspot.com",
+    messagingSenderId: "1079580350875"
+  };
+  firebase.initializeApp(config);
+</script>
+        <link rel="icon" href="http://adventistyouthministries.org/files/images/logos/Pathfinders-Logo-NAD.jpg">
+
+  <title>PathfinderHonors</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+.color {
+margin-top: 10px;
+}
+    .color2 {
+margin-top: 30px;
+}
+    .width {
+    width: 75%;
+    margin-left: 20px;
+    }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">Sign Up</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+  <ul class="nav navbar-nav">
+             <li><a href="tutorial.html">Tutorial</a></li>
+      </ul>
+      
+<ul class="nav navbar-nav">
+             <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href = "#" onclick="goBack()" ><span class="glyphicon glyphicon-triangle-left"></span> Back</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script>
+function goBack() {
+    window.history.back();
+}
+//get data from text box
+var firstName;
+var lastName;
+var Email
+function getdata() {
+ firstName = (document.getElementById('idfirstName').value);
+lastName = (document.getElementById('idlastName').value);
+ Email = (document.getElementById('idEmail').value);
+}
+//var clubName = 'Eau Claire Critters';
+//var name = 'Josh Simmons';
+function writeUserData() {
+    console.log(firstName, lastName, Email);
+  firebase.database().ref().child('teachers').push({
+    firstName : firstName,
+    lastName: lastName,
+    Email: Email,
+  });
+window.open("#");
+} 
+</script>
+<div class = "width">
+<form action = "page1.html" method = "get">
+<div class="form-group color2">
+  <input type="text"  min="15-15" placeholder = "First Name" class="form-control" id="idfirstName" required>
+</div>
+<div class="form-group color2">
+<input type="text" placeholder = "Last Name"  min="15-15" class="form-control" id="idlastName" required>
+</div>
+<div class="form-group color2">
+  <input type = "text" placeholder = "Email" class="form-control" id="idEmail" required>
+<div class = "form-group">
+<input type="button" class = "btn btn-light color2" name="Button" value = "submit" onclick="getdata(); writeUserData();"></input>
+</div>
+</div>
+</form>
+</div>
+</body>
+</html>
