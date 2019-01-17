@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+<link rel="icon" href="http://adventistyouthministries.org/files/images/logos/Pathfinders-Logo-NAD.jpg">
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
 <script>
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyD760EeONRvN-11kgSaqTDwx3blDlQKp1M",
-    authDomain: "community-christmas.firebaseapp.com",
-    databaseURL: "https://community-christmas.firebaseio.com",
-    projectId: "community-christmas",
-    storageBucket: "community-christmas.appspot.com",
-    messagingSenderId: "1079580350875"
+    apiKey: "AIzaSyBf0ALAUw23c3tHpILAGCi3rIdsxc0wDiE",
+    authDomain: "pathfinder-honor.firebaseapp.com",
+    databaseURL: "https://pathfinder-honor.firebaseio.com",
+    projectId: "pathfinder-honor",
+    storageBucket: "pathfinder-honor.appspot.com",
+    messagingSenderId: "219885433135"
   };
   firebase.initializeApp(config);
 </script>
-        <link rel="icon" href="http://adventistyouthministries.org/files/images/logos/Pathfinders-Logo-NAD.jpg">
-
   <title>PathfinderHonors</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -80,7 +79,7 @@ userId = (document.getElementById('userId').value);
 //var clubName = 'Eau Claire Critters';
 //var name = 'Josh Simmons';
 function writeUserData() {
-    console.log(firstName, lastName, clubName, userId);
+    //console.log(firstName, lastName, clubName, userId);
   firebase.database().ref().child('user').push({
     firstName : firstName,
     lastName: lastName,
