@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" href="http://adventistyouthministries.org/files/images/logos/Pathfinders-Logo-NAD.jpg">
+
+        <link rel="icon" href="http://adventistyouthministries.org/files/images/logos/Pathfinders-Logo-NAD.jpg">
 <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -62,14 +63,16 @@ margin-top: 30px;
   </div>
 </nav>
 <script>
-function goBack() {
-    window.history.back();
+//function goBack() {
+    //window.history.back();
 }
+</script>
+  <script>
 //get data from text box
 var firstName;
 var lastName;
-var clubName
-var userId
+var clubName;
+var userId;
 function getdata() {
  firstName = (document.getElementById('idfirstName').value);
 lastName = (document.getElementById('idlastName').value);
@@ -79,20 +82,18 @@ userId = (document.getElementById('userId').value);
 //var clubName = 'Eau Claire Critters';
 //var name = 'Josh Simmons';
 function writeUserData() {
-    //console.log(firstName, lastName, clubName, userId);
+    console.log(firstName, lastName, clubName, userId);
   firebase.database().ref().child('user').push({
     firstName : firstName,
     lastName: lastName,
     clubName: clubName,
     userId: userId
   });
-} 
-</script>
+} </script>
 <div class = "width">
-<form action = "page1.html" method = "get">
+<form action = "#" method = "get">
 <div class="form-group color2">
   <input type="text" placeholder = "First Name" class="form-control" id="idfirstName" required>
-</div>
 <div class="form-group color2">
 <input type="text" placeholder = "Last Name" class="form-control" id="idlastName" required>
 </div>
@@ -103,9 +104,9 @@ function writeUserData() {
   <input type="text" placeholder = "ID" class="form-control" id="userId" required>
 </div>
 <div class = "form-group">
-    <button class = "btn btn-light" onclick = "getdata(); writeUserData();">submit</button>
+<button class = "btn btn-light" onsubmit ="getdata(); writeUserData();">submit</button>
 </div>
-</form>
+</form> 
 </div>
 </body>
 </html>
