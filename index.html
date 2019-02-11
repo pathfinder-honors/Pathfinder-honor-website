@@ -11,9 +11,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+    .input {
+      margin-top: 100px;
+    }
+</style>
 </head>
 <body>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -42,7 +47,7 @@ function goBack() {
 </script>
 <div class="container">
 <center>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for honor.." title="Type in a name">
+<input type="text" class = "input" id="myInput" onkeyup="myFunction()" placeholder="Search for honor.." title="Type in a name">
 <table id="myTable">
   <tr class="header">
     <th style="width:60%;">Honor</th>
