@@ -89,8 +89,13 @@ function writeUserData() {
     lastName: lastName,
     Email: Email,
   });
-window.open("index.html");
-} 
+}
+function timer() {
+setTimeout(newpage,3000);
+}
+function newpage() {
+window.open("index.html","_top");
+}
 </script>
 <div class = "width">
 <form action = "page1.html" method = "get">
