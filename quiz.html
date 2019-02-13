@@ -35,6 +35,27 @@ margin-top: 30px;
     width: 75%;
     margin-left: 20px;
     }
+.loader {
+  border: 16px solid #cccccc;
+  border-radius: 50%;
+  border-top: 16px solid white;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+margin-top: 150px;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 </style>
 </head>
 <body>
@@ -114,10 +135,24 @@ window.open("page1.html","_top");
   <input type="text" placeholder = "ID"  min="15-15" class="form-control" id="userId">
 </div>
 <div class = "form-group">
-<input type="button" class = "btn btn-light" name="Button" value = "submit" onclick="getdata(); writeUserData(); timer();"></input>
+<input type="button" class = "btn btn-light" name="Button" value = "submit" onclick="myFunction(); getdata(); writeUserData(); timer();"></input>
 </div>
 </div>
 </form>
 </div>
+<!-- The Modal -->
+<div class="modal" id="myModal">
+<center>
+      <!-- Modal body -->
+      <div class="loader">
+      </div>
+        </center>
+    </div>
+<script>
+$("#myModal").hide()
+function myFunction() {
+$("#myModal").show() 
+}
+</script>
 </body>
 </html>
