@@ -1,344 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Bootstrap Framwork -->
+  <head>
+    <!-- Bootstrap Framwork -->
     <link rel="icon" href="http://adventistyouthministries.org/files/images/logos/Pathfinders-Logo-NAD.jpg">
-  <title>PathfinderHonors</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link href="https://fonts.googleapis.com/css?family=Niramit:300i,400" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- css styling -->
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<!-- css for this file -->
-<style>
-.color {
-margin-top: 20px;
-}
-    .color2 {
-margin-left: 30px;
-        padding: 10px;
-}
-</style>
-</head>
-<body>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Quiz</a>
+    <title>PathfinderHonors</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Niramit:300i,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- css for this file -->
+    <style>
+      body {
+        background-color: rgb(55,66,22);
+        color: #AAAAAA;
+      }
+      
+      .question-photo {
+        width: 100%;
+        max-width: 500px;
+        padding-right: 10px;
+      }
+           
+
+      .question.card-deck {
+        margin: 1rem;
+      }
+           
+      .question.card {
+        xmax-width: 24rem;
+        padding: 1rem;
+      }
+      
+      .card-columns {
+        column-count: 4
+      }
+      
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">    
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Quiz</a>
+        </div>
+      </div>
+      </div>
+    </nav>
+    
+    <div class="question xcard-deck card-deck">
+      
+      <div class="question card">
+        <h4 class="card-title">Question 1: Name the butterfly</h4>
+        <div class="card-body">
+          <img src="images/Butterfly Pictures/Black Swallowtail Butterfly.jpg" class="question-photo">
+          <div class="radio">
+            <label>
+            <input type="radio" name="q1" >A</label>
+          </div>
+          <div class="radio">
+            <label>
+            <input type="radio" name="q1">B</label>
+          </div>
+          <div class="radio disabled">
+            <label>
+            <input type="radio" name="q1" >C</label>
+          </div>
+          <div class="radio disabled">
+            <label>
+            <input type="radio" name="q1" >D</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question card">
+        <h4 class="card-title">Question 2: Name the butterfly</h4>
+        <div class="card-body">
+          <img src="images/Butterfly Pictures/Cabbage White Butterfly.jpg" class="question-photo">
+          <div class="radio">
+            <label>
+            <input type="radio" name="q2" >A</label>
+          </div>
+          <div class="radio">
+            <label>
+            <input type="radio" name="q2">B</label>
+          </div>
+          <div class="radio disabled">
+            <label>
+            <input type="radio" name="q2" >C</label>
+          </div>
+          <div class="radio disabled">
+            <label>
+            <input type="radio" name="q2" >D</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question card">
+        <h4 class="card-title">Question 3: Name the butterfly</h4>
+        <div class="card-body">
+          <img src="images/Butterfly Pictures/Black Swallowtail Butterfly.jpg" class="question-photo">
+          <div class="radio">
+            <label>
+            <input type="radio" name="q3" >A</label>
+          </div>
+          <div class="radio">
+            <label>
+            <input type="radio" name="q3">B</label>
+          </div>
+          <div class="radio disabled">
+            <label>
+            <input type="radio" name="q3" >C</label>
+          </div>
+          <div class="radio disabled">
+            <label>
+            <input type="radio" name="q3">D</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question card">
+        <h4 class="card-title">Question 4: Name the butterfly</h4>
+        <div class="card-body">
+          <img src="images/Butterfly Pictures/Cabbage White Butterfly.jpg" class="question-photo">
+          <div class="radio">
+            <label>
+            <input type="radio" name="q4" >A</label>
+          </div>
+          <div class="radio">
+            <label>
+            <input type="radio" name="q4">B</label>
+          </div>
+          <div class="radio disabled">
+            <label>
+            <input type="radio" name="q4">C</label>
+          </div>
+          <div class="radio disabled">
+            <label>
+            <input type="radio" name="q4">D</label>
+          </div>
+        </div>
+      </div>
+	  
+      
+      
     </div>
-    </div>
-  </div>
-</nav>
-<div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-</div>
-<div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-    <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-    <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-    <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-      <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-        <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-        <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-        <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-        <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-        <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-        <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-        <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-        <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-        <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-        <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-        <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-        <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-        <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-    </div>
-        <div class = "color2">
-<h4>Some Question</h4>
-<div class="radio">
-  <label><input type="radio" name="optradio" checked>A</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">B</label>
-</div>
-<div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>C</label>
-</div>
-    <div class="radio disabled">
-  <label><input type="radio" name="optradio" disabled>D</label>
-</div>
-      <form action = "index.html" method = "get">
-    <button type="submitt" class="btn color">Finish</button>
-    </form>      
-    </div>
-</body>
+  </body>
 </html>
+
