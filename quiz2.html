@@ -15,8 +15,8 @@
     <!-- css for this file -->
     <style>
       body {
-        background-color: rgb(55,66,22);
-        color: #AAAAAA;
+        background-color: white;
+        color: white;
       }
       
       .question-photo {
@@ -31,6 +31,7 @@
       }
            
       .question.card {
+    background-color: #3b3b40;
         xmax-width: 24rem;
         padding: 1rem;
       }
@@ -42,19 +43,15 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-inverse">    
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Quiz</a>
-        </div>
-      </div>
-      </div>
-    </nav>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Quiz</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>-->
+</nav>
     
     <div class="question xcard-deck card-deck">
       
@@ -149,9 +146,6 @@
           </div>
         </div>
       </div>
-	  
-      
-      
     </div>
   </body>
 </html>
