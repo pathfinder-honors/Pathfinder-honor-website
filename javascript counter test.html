@@ -3,7 +3,7 @@
 <title>Code Generator App</title>
 <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
 <script>
-  // Initialize Firebase
+  //Initialize Firebase
   var config = {
     apiKey: "AIzaSyBf0ALAUw23c3tHpILAGCi3rIdsxc0wDiE",
     authDomain: "pathfinder-honor.firebaseapp.com",
@@ -28,10 +28,10 @@ number2 = Number + 1000
 function writeUserData() {
     console.log(number2);
   firebase.database().ref().child('ID').push({
-  //ID : Number,
+  ID : number2,
   });
 }
 </script>
-<button type = "submit" onclick = "writeUserData(); test();">Generate Code</button>
+<button type = "submit" onclick = "test(); writeUserData();">Generate Code</button>
 </body>
 </html>
