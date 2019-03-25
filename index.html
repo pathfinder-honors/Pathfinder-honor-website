@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" href="http://adventistyouthministries.org/files/images/logos/Pathfinders-Logo-NAD.jpg">
   <title>PathfinderHonors</title>
 <!-- Bootstrap Framwork -->
@@ -13,6 +14,37 @@
     .input {
       margin-top: 100px;
     }
+  
+  .fa-instagram {
+  background-color: #e54e83;
+  color: white;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+    margin-right: 5px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fl {
+margin-top: 300px;
+}
 </style>
 </head>
 <body>
@@ -35,6 +67,11 @@
     </ul>
   </div>
 </nav>
+<div class = "d-flex flex-column fixed-top fl">
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-twitter"></a>
+</div>
 <script>
 function goBack() {
     window.history.back();
