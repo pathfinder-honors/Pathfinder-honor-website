@@ -63,29 +63,26 @@ margin-top: 150px;
 </style>
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="index.html">Moths and Butterflys</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-  <ul class="nav navbar-nav">
-             <li><a href="tutorial.html">Tutorial</a></li>
-      </ul>
-      
-<ul class="nav navbar-nav">
-             <li><a href="quiz.html">Quiz</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href = "#" onclick="goBack()" ><span class="glyphicon glyphicon-triangle-left"></span> Back</a></li>
-      </ul>
-    </div>
-  </div>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Quiz</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="tutorial.html">Tutorial</a>
+        </li>
+          <li class="nav-item">
+        <a class="nav-link" href="quiz.html">Quiz</a>
+        </li>
+    </ul>
+  </div> 
 </nav>
 <script>
 //function goBack() {
@@ -139,7 +136,7 @@ window.open("page1.html","_top");
   <input type="text" placeholder = "ID"  min="15-15" class="form-control" id="userId">
 </div>
 <div class = "form-group">
-<input type="button" class = "btn btn-light" name="Button" value = "submit" onclick="myFunction(); getdata(); writeUserData(); timer();"></input>
+<input type="button" class = "btn btn-secondary" name="Button" value = "submit" onclick="myFunction(); getdata(); writeUserData(); timer();"></input>
 </div>
 </div>
 </form>
