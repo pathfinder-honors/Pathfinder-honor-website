@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Javascript -->
+<script type = "text/javascript" src = "JS/main.js"></script>
+<!-- Firebase -->
 <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -35,6 +38,37 @@ margin-top: 30px;
     width: 75%;
     margin-left: 20px;
     }
+.color {
+margin-top: 10px;
+}
+    .color2 {
+margin-top: 30px;
+}
+    .width {
+    width: 75%;
+    margin-left: 20px;
+    }
+.loader {
+  border: 16px solid #cccccc;
+  border-radius: 50%;
+  border-top: 16px solid white;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+margin-top: 150px;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 </style>
 </head>
 <body>
@@ -67,51 +101,35 @@ margin-top: 30px;
     //window.history.back();
 }
 </script>
-<script>
-function goBack() {
-    window.history.back();
-}
-//get data from text box
-var firstName;
-var lastName;
-var Email
-function getdata() {
- firstName = (document.getElementById('idfirstName').value);
-lastName = (document.getElementById('idlastName').value);
- Email = (document.getElementById('idEmail').value);
-}
-//var clubName = 'Eau Claire Critters';
-//var name = 'Josh Simmons';
-function writeUserData() {
-    console.log(firstName, lastName, Email);
-  firebase.database().ref().child('teachers').push({
-    firstName : firstName,
-    lastName: lastName,
-    Email: Email,
-  });
-}
-function timer() {
-setTimeout(newpage,3000);
-}
-function newpage() {
-window.open("index.html","_top");
-}
-</script>
 <div class = "width">
 <form action = "page1.html" method = "get">
 <div class="form-group color2">
-  <input type="text"  min="15-15" placeholder = "First Name" class="form-control" id="idfirstName" required>
+  <input type="text"  min="15-15" placeholder = "First Name" class="form-control" id="idfirstName2" required>
 </div>
 <div class="form-group color2">
-<input type="text" placeholder = "Last Name"  min="15-15" class="form-control" id="idlastName" required>
+<input type="text" placeholder = "Last Name"  min="15-15" class="form-control" id="idlastName2" required>
 </div>
 <div class="form-group color2">
-  <input type = "text" placeholder = "Email" class="form-control" id="idEmail" required>
+  <input type = "text" placeholder = "Email" class="form-control" id="idEmail2" required>
 <div class = "form-group">
-<input type="button" class = "btn btn-light color2" name="Button" value = "submit" onclick="getdata(); writeUserData();"></input>
+<input type="button" class = "btn btn-light color2" name="Button" value = "submit" onclick="myFunction(); getdata2(); writeUserData2(); timer2()">
 </div>
 </div>
 </form>
 </div>
+<!-- The Modal -->
+<div class="modal" id="myModal">
+<center>
+      <!-- Modal body -->
+      <div class="loader">
+      </div>
+        </center>
+    </div>
+<script>
+$("#myModal").hide()
+function myFunction() {
+$("#myModal").show() 
+}
+</script>
 </body>
 </html>

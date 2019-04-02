@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-        <link rel="icon" href="http://adventistyouthministries.org/files/images/logos/Pathfinders-Logo-NAD.jpg">
+<link rel="icon" href="http://adventistyouthministries.org/files/images/logos/Pathfinders-Logo-NAD.jpg">
+<!-- Javascript -->
+<script type = "text/javascript" src = "JS/main.js"></script>
+<!-- Firebase -->
 <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -84,44 +86,6 @@ margin-top: 150px;
     </ul>
   </div> 
 </nav>
-<script>
-//function goBack() {
-    //window.history.back();
-}
-</script>
-<script>
-function goBack() {
-    window.history.back();
-}
-//get data from text box
-var firstName;
-var lastName;
-var clubName
-var userId
-function getdata() {
- firstName = (document.getElementById('idfirstName').value);
-lastName = (document.getElementById('idlastName').value);
- clubName = (document.getElementById('idclubName').value);
-userId = (document.getElementById('userId').value);
-}
-//var clubName = 'Eau Claire Critters';
-//var name = 'Josh Simmons';
-function writeUserData() {
-    console.log(firstName, lastName, clubName, userId);
-  firebase.database().ref().child('user').push({
-    firstName : firstName,
-    lastName: lastName,
-    clubName: clubName,
-    userId: userId
-  });
-}
-function timer() {
-setTimeout(newpage,3000);
-}
-function newpage() {
-window.open("page1.html","_top");
-}
-</script>
 <div class = "width">
 <form action = "#" method = "get">
 <div class="form-group color2">
@@ -136,7 +100,7 @@ window.open("page1.html","_top");
   <input type="text" placeholder = "ID"  min="15-15" class="form-control" id="userId">
 </div>
 <div class = "form-group">
-<input type="button" class = "btn btn-secondary" name="Button" value = "submit" onclick="myFunction(); getdata(); writeUserData(); timer();"></input>
+<input type="button" class = "btn btn-secondary" name="Button" value = "submit" onclick="myFunction(); getdata(); writeUserData(); timer(); name();"></input>
 </div>
 </div>
 </form>
