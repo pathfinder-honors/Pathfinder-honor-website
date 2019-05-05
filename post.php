@@ -18,8 +18,8 @@ $data = $_POST["firstname"];
 $data1 = $_POST["lastname"];
 $data2 = $_POST["clubname"];
 $data3 = $_POST["ID"];
-
-if (isset($_POST["submit"])) {
+$len = strlen($data) > 2;
+if (isset($_POST["submit"]) + {
 print("it works");
 } 
     
