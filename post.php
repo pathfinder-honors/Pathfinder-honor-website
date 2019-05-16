@@ -18,8 +18,18 @@ $data = $_POST["firstname"];
 $data1 = $_POST["lastname"];
 $data2 = $_POST["clubname"];
 $data3 = $_POST["ID"];
+<<<<<<< HEAD
 
 if (isset($_POST["submit"])) {
+=======
+$len = strlen($data) > 2;
+if (isset($_POST["submit"]) + {
+print("it works");
+} 
+    
+    
+/*
+>>>>>>> 27cf4c60d0c488edfcc72919150bd5961d814fa1
 // --post data to database--  
 $servername = "localhost";
 $username = "zachary";
