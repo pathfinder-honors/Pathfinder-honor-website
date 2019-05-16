@@ -6,11 +6,11 @@
 <body>
 <div class = "inline">
 <form action = "post.php" method = "post">
-<input type = "text" name = "firstname" placeholder = " firstname">
-<input type = "text" name = "lastname" placeholder = " lastname">
-<input type = "text" name = "clubname" placeholder = " clubname">
-<input type = "text" name = "ID" placeholder = "ID">
-<input type = "submit" onclick = "post" name = "submit">
+<input type = "text" name = "firstname" placeholder = " firstname" required>
+<input type = "text" name = "lastname" placeholder = " lastname" required>
+<input type = "text" name = "clubname" placeholder = " clubname" required>
+<input type = "text" name = "ID" placeholder = "ID" required>
+<input type = "submit" onclick = "post" name = "submit" required>
 </form>
 </div>
 <?php
@@ -20,11 +20,6 @@ $data2 = $_POST["clubname"];
 $data3 = $_POST["ID"];
 
 if (isset($_POST["submit"])) {
-print("it works");
-} 
-    
-    
-/*
 // --post data to database--  
 $servername = "localhost";
 $username = "zachary";
@@ -38,8 +33,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO users (Firstname)
-VALUES('$data')";
+$sql = "INSERT INTO users (Firstname, Lastname, Clubname, ID)
+VALUES('$data', '$data1', '$data2', '$data3',)";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
@@ -48,7 +43,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-*/
-    ?>
+}
+?>
 </body>
 </html>
